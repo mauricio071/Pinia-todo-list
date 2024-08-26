@@ -1,0 +1,19 @@
+{
+  "tarefas": [
+    {
+      "titulo": "Estudar vue",
+      "favoritado": true,
+      "id": 1
+    },
+    {
+      "titulo": "asdfdsa",
+      "favoritado": false,
+      "id": 2
+    },
+    {
+      "titulo": "asdfasdf",
+      "favoritado": false,
+      "id": 3
+    }
+  ]
+}

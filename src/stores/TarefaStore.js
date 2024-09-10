@@ -6,52 +6,55 @@ export const useTarefaStore = defineStore("tarefas", {
         isLoading: false
     }),
     actions: {
-        async listarTarefas() {
-            this.isLoading = true
-            const data = await fetch('http://localhost:3000/tarefas')
-                .then((response) => response.json())
-            this.tarefas = data
-            this.isLoading = false
+        listarTarefas() {
+            return this.tarefas;
         },
-        async favoritar(id) {
-            const favorito = this.tarefas.find((item) => item.id === id)
-            favorito.favoritado = !favorito.favoritado
-            const data = await fetch(`http://localhost:3000/tarefas/${id}`, {
-                method: "PATCH",
-                headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify({ favoritado: favorito.favoritado })
-            })
+        adicionar(data) {
+            this.tarefas.unshift(data);
         },
-        async adicionar(data) {
-            this.tarefas.push(data)
-            await fetch("http://localhost:3000/tarefas", {
-                method: "POST",
-                headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-        },
-        async remover(id) {
-            await fetch(`http://localhost:3000/tarefas/${id}`, {
-                method: "DELETE",
-            })
-            const idx = this.tarefas.findIndex((item) => item.id === id)
-            this.tarefas.splice(idx, 1)
+        atualizarTarefa(id, update) {
+            const tarefa = this.tarefas.find((item) => item.id === id);
+            const tarefaIdx = this.tarefas.findIndex((item) => item.id === id);
 
-            // this.tarefas = this.tarefas.filter((item) => item.id !== id)
+            if (tarefa) {
+                Object.assign(tarefa, update);
+                this.tarefas[tarefaIdx] = tarefa;
+            } else {
+                console.log(`Tarefa com ID ${id} não encontrada.`);
+            }
+        },
+        remover(id) {
+            const idx = this.tarefas.findIndex((item) => item.id === id);
+            if (idx !== -1) {
+                this.tarefas.splice(idx, 1);
+            } else {
+                console.log(`Tarefa com ID ${id} não encontrada.`);
+            }
         }
     },
     getters: {
-        favoritos() {
-            return this.tarefas.filter((item) => item.favoritado)
+        pendentes() {
+            return this.tarefas?.filter((item) => !item.completada);
         },
-        contadorFavoritos() {
-            // return this.tarefas.filter((item) => item.favoritado).length
+        marcadas() {
+            return this.tarefas?.filter((item) => item.marcada);
+        },
+        completadas() {
+            return this.tarefas?.filter((item) => item.completada);
+        },
 
-            return this.tarefas.reduce((total, item) => { return item.favoritado ? total += 1 : total }, 0)
+        contadorPendentes() {
+            return this.tarefas?.reduce((total, item) => !item.completada ? total + 1 : total, 0);
         },
-        contadorTarefas() {
-            return this.tarefas.length
-        }
+        contadorMarcadas() {
+            return this.tarefas?.reduce((total, item) => item.marcada ? total + 1 : total, 0);
+        },
+        contadorCompletadas() {
+            return this.tarefas?.reduce((total, item) => item.completada ? total + 1 : total, 0);
+        },
     },
-    persist: true
-})
+    persist: {
+        enabled: true
+    }
+});
+

@@ -3,9 +3,9 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createPinia } from 'pinia'
-import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
+import piniaPersist from 'pinia-plugin-persistedstate'
 
 const pinia = createPinia()
-pinia.use(piniaPluginPersistedstate)
+pinia.use(piniaPersist)
 
-createApp(App).use(createPinia()).mount('#app')
+createApp(App).use(pinia).mount('#app')

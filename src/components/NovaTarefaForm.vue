@@ -1,29 +1,30 @@
 <template>
     <form @submit.prevent="handleSubmit">
         <input v-model="novaTarefa" typye="text" placeholder="Insira uma nova tarefa" />
-        <button>add</button>
+        <button>Adicionar</button>
     </form>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { useTarefaStore } from '../stores/TarefaStore'
+import { v4 } from 'uuid'
 
 const tarefaStore = useTarefaStore()
 
 const novaTarefa = ref("")
 
-const handleSubmit = async () => {
+const handleSubmit = () => {
     if (novaTarefa.value) {
         const data = {
-            // id: Math.floor(Math.random() * 1000),
+            id: v4(),
             titulo: novaTarefa.value,
-            favoritado: false
+            marcada: false,
+            completada: false,
         }
-
-        await tarefaStore.adicionar(data)
+        tarefaStore.adicionar(data)
         novaTarefa.value = ""
-        await tarefaStore.listarTarefas()
+        tarefaStore.listarTarefas()
     }
 }
 </script>

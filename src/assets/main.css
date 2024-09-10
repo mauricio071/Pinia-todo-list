@@ -1,134 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: #f2f2f2;
-  color: #444;
-  margin: 0;
+  @apply bg-[#f2f2f2] text-gray-700 m-0;
 }
 
 body * {
   font-family: "Poppins";
 }
 
-/* header */
 header {
-  text-align: center;
-  background: #e7e7e7;
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @apply text-center bg-[#e7e7e7] pt-5 flex justify-center items-center;
 }
 
 header img {
-  max-width: 60px;
-  transform: rotate(-10deg);
+  @apply max-w-[60px] transform rotate-[-10deg];
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2em;
-  padding-top: 25px;
-  margin-left: 15px;
-  color: #777;
-  transform: rotate(2deg);
+  @apply m-0 text-2xl pt-6 ml-4 text-gray-500 transform rotate-2;
 }
 
-/* task list */
 .task-list {
-  max-width: 640px;
-  margin: 20px auto;
+  @apply max-w-xl mx-auto my-5 p-4;
 }
 
 .task {
-  padding: 6px 20px;
-  background: #fff;
-  margin-top: 20px;
-  border-radius: 4px;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.05);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @apply p-5 bg-white mt-5 rounded-md shadow-md flex justify-between items-center;
 }
 
-.task h3,
-.task .icons {
-  display: inline-block;
+.task h3 {
+  @apply inline-block;
 }
 
 .task .icons {
-  text-align: right;
+  @apply flex gap-2 text-right;
 }
 
 .task i {
-  font-size: 1.4em;
-  margin-left: 6px;
-  cursor: pointer;
-  color: #bbb;
+  @apply text-2xl ml-1.5 cursor-pointer text-gray-400;
 }
 
 .task i.active {
-  color: #ff005d;
+  @apply text-pink-600;
 }
 
-/* filter nav */
 .filter {
-  width: 640px;
-  margin: 10px auto;
-  text-align: right;
+  @apply flex justify-center gap-4 flex-wrap text-center my-2.5 p-4 pb-0;
 }
 
 .filter button {
-  display: inline-block;
-  margin-left: 10px;
-  background: #fff;
-  border: 2px solid #555;
-  border-radius: 4px;
-  padding: 4px 8px;
-  cursor: pointer;
-  font-size: 0.8em;
-  font-size: 1em;
+  @apply bg-white border-2 border-gray-700 rounded-md py-1 px-2 text-base cursor-pointer;
 }
 
-/* new task form */
 .new-task-form {
-  background: #e7e7e7;
-  padding: 20px 0;
+  @apply bg-[#e7e7e7] py-5;
 }
 
 form {
-  max-width: 400px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 10px;
-}
-
-form button {
-  background: #ffd859;
-  border: 0;
-  padding: 10px;
-  font-family: "Poppins";
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1em;
+  @apply max-w-md mx-auto grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-2.5 p-4;
 }
 
 form input {
-  border: 0;
-  padding: 10px;
-  border-radius: 6px;
-  color: #555;
-  font-size: 1em;
+  @apply border-0 p-2.5 rounded-md text-gray-600 text-base;
 }
 
-/* loading state */
-.loading {
-  max-width: 640px;
-  border: 1px solid #ffd859;
-  background: #ffe9a0;
-  color: #3a3a3a;
-  padding: 5px 0;
-  text-align: center;
-  margin: 30px auto;
+form button {
+  @apply bg-yellow-400 border-0 p-2.5 rounded-md cursor-pointer text-base max-w-[10rem] mx-auto;
 }

@@ -1,19 +1,16 @@
 {
   "tarefas": [
     {
-      "titulo": "Estudar vue",
-      "favoritado": true,
+      "titulo": "asdfasdf",
+      "favoritado": false,
+      "completado": false,
       "id": 1
     },
     {
-      "titulo": "asdfdsa",
+      "titulo": "asdf",
       "favoritado": false,
+      "completado": false,
       "id": 2
-    },
-    {
-      "titulo": "asdfasdf",
-      "favoritado": false,
-      "id": 3
     }
   ]
 }

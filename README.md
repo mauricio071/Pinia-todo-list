@@ -1,29 +1,47 @@
-# .
+<div align="center"> <h1>Tarefas Pinia</h1> </div>
 
-This template should help get you started developing with Vue 3 in Vite.
+![Preview-Screens](https://github.com/mauricio071/tarefas-pinia/blob/master/tarefas-pinia.png)
 
-## Recommended IDE Setup
+## 📝 Sobre o projeto
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Este projeto, desenvolvido com Vue 3, é uma aplicação de lista de tarefas que facilita a organização dos afazeres diários. Os usuários podem classificar cada tarefa como 'a fazer', 'em progresso' ou 'completada'. O estado da aplicação é gerenciado pelo Pinia, garantindo que as informações persistam no navegador, mesmo após a atualização da página ou fechamento.
 
-## Customize configuration
+## 🛠 Tecnologias utilizadas
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+-   **Vue.js** - Framework JavaScript progressivo
+-   **Pinia** - Biblioteca de gerenciamento de estado
+-   **JavaScript** - Linguagem de programação
+-   **HTML** - Estrutura do conteúdo
+-   **CSS** - Estilização da interface
+-   **Tailwind CSS** - Framework de estilos
 
-## Project Setup
+## 🌐 Acesse o projeto online
+Você pode acessar a versão online do projeto [aqui](https://tarefas-pinia.netlify.app).
 
-```sh
-npm install
+## 🖥️ Como configurar o projeto
+Siga os passos abaixo para instalar e executar o projeto em seu ambiente local:
+
+### 1. Clone o repositório:
+
+```bash
+$ git clone https://github.com/mauricio071/Tarefas-pinia
 ```
 
-### Compile and Hot-Reload for Development
+### 2. Acesse o diretório do projeto:
 
-```sh
-npm run dev
+```bash
+$ cd Tarefas-pinia
 ```
 
-### Compile and Minify for Production
+### 3. Instale as dependências necessárias:
 
-```sh
-npm run build
+```bash
+$ npm install
 ```
+
+### 4. Inicialize o projeto:
+
+```bash 
+$ npm run dev
+```
+Agora você pode acessar o projeto no navegador em http://localhost:5173 (ou na porta indicada pelo terminal).

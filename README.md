@@ -1,6 +1,6 @@
 <div align="center"> <h1>Tarefas Pinia</h1> </div>
 
-![Preview-Screens](https://github.com/mauricio071/tarefas-pinia/blob/master/tarefas-pinia.png)
+![Preview-Screens](https://github.com/mauricio071/tarefas-pinia/blob/Master/readme-img.png)
 
 ## 📝 Sobre o projeto
 

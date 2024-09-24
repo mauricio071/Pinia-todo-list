@@ -1,5 +1,13 @@
 <div align="center"> <h1>Tarefas Pinia</h1> </div>
 
+<p align="center">
+  <img alt="Github Language Count" src="https://img.shields.io/github/languages/count/mauricio071/Tarefas-pinia?color=00bfa6">
+  <img width="1" />
+  <img alt="Github Top Language" src="https://img.shields.io/github/languages/top/mauricio071/Tarefas-pinia?color=00bfa6">
+  <img width="1" />
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/mauricio071/Tarefas-pinia?color=00bfa6">
+</p>
+
 ![Preview-Screens](https://github.com/mauricio071/tarefas-pinia/blob/Master/readme-img.png)
 
 ## 📝 Sobre o projeto

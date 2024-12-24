@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="handleSubmit">
-        <input v-model="novaTarefa" typye="text" placeholder="Insira uma nova tarefa" />
-        <button>Adicionar</button>
+        <input v-model="novaTarefa" type="text" placeholder="Insira uma nova tarefa" />
+        <button class="text-white">Adicionar</button>
     </form>
 </template>
 

@@ -8,7 +8,7 @@
         </button>
         <input v-model="novoTitulo" @keyup.enter="atualizarTitulo" @blur="atualizarTitulo" type="text"
             placeholder="Digite a sua tarefa"
-            class=" placeholder-gray-500 text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3">
+            class="placeholder-gray-500 text-gray-700 font-light focus:outline-none block w-full appearance-none leading-normal mr-3">
         <div class="icons">
             <div>
                 <i @click="atualizarMarca" class="material-icons" :class="{ 'marcada': marcada }">bookmark</i>

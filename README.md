@@ -17,6 +17,7 @@ Este projeto, desenvolvido com Vue 3, é uma aplicação de lista de tarefas que
 ## 🛠 Tecnologias utilizadas
 
 -   **Vue.js** - Framework JavaScript progressivo
+-   **Vite** - Ferramenta de build rápida para desenvolvimento front-end
 -   **Pinia** - Biblioteca de gerenciamento de estado
 -   **JavaScript** - Linguagem de programação
 -   **HTML** - Estrutura do conteúdo
